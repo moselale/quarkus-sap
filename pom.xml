@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.acme</groupId>
   <artifactId>openshift-quickstart</artifactId>
@@ -52,20 +51,20 @@
     </dependency>
 
     <dependency>
-        <groupId>com.sap.conn.jco</groupId>
-        <artifactId>sapjco3</artifactId>
-        <version>${sapjco3-version}</version>
-        <type>jar</type>
-        <scope>system</scope>
-        <systemPath>${basedir}/lib/sapjco3.jar</systemPath>
+      <groupId>com.sap.conn.jco</groupId>
+      <artifactId>sapjco3</artifactId>
+      <version>${sapjco3-version}</version>
+      <type>jar</type>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/sapjco3.jar</systemPath>
     </dependency>
     <dependency>
-        <groupId>com.sap.conn.jco</groupId>
-        <artifactId>libsapjco3</artifactId>
-        <version>${sapjco3-version}</version>
-        <type>so</type>
-        <scope>system</scope>
-        <systemPath>${basedir}/lib/native/libsapjco3.so</systemPath>
+      <groupId>com.sap.conn.jco</groupId>
+      <artifactId>libsapjco3</artifactId>
+      <version>${sapjco3-version}</version>
+      <type>so</type>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/native/libsapjco3.so</systemPath>
     </dependency>
   </dependencies>
   <build>
@@ -104,19 +103,19 @@
         </configuration>
       </plugin>
       <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <configuration>
-              <archive>
-                  <manifestEntries>
-                      <Build-By>me</Build-By>
-                      <Class-Path>${basedir}/lib/sapjco3.jar ${basedir}/lib/native/libsapjco3.so</Class-Path>
-                  </manifestEntries>
-              </archive>
-          </configuration>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Build-By>me</Build-By>
+              <Class-Path>${basedir}/lib/sapjco3.jar ${basedir}/lib/native/libsapjco3.so</Class-Path>
+            </manifestEntries>
+          </archive>
+        </configuration>
       </plugin>
-      
-     <!--  <plugin>
+
+      <!--  <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <version>3.1.2</version>
